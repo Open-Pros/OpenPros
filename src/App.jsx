@@ -44,7 +44,7 @@ function Home() {
         By publicly releasing <strong>OPENPROS</strong>, we aim to encourage the development of advanced machine learning algorithms capable of bridging this performance gap and producing clinically usable, high-resolution, and highly accurate prostate ultrasound images.
       </p>
       <img
-        src="/images/pipeline.png"
+        src={`${import.meta.env.BASE_URL}images/pipeline.png`}
         alt="OpenPros end-to-end pipeline."
         style={{ width: '100%', maxWidth: '1000px', borderRadius: '10px', marginTop: '20px' }}
       />
