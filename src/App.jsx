@@ -27,19 +27,22 @@ function Home() {
     <div className="content-container">
       <h2>Overview</h2>
       <p>
-        Prostate cancer remains one of the most prevalent and lethal cancers among men. Early detection of prostate cancer has been shown to be critical, but an accurate and widely accessible approach is still an unmet need. Ultrasound imaging is used for routine diagnosis and biopsy guidance, yet its early detection is hindered by limitations in conventional transrectal ultrasound (TRUS) imaging.
+        Prostate cancer is one of the most common and lethal cancers among men, making its early detection critically important. Although ultrasound imaging offers greater accessibility and cost-effectiveness compared to MRI, traditional transrectal ultrasound (TRUS) methods suffer from low sensitivity, especially in detecting anteriorly located tumors.
       </p>
       <p>
-        To address this gap, we introduce <strong>OPENPROS</strong>, the first large-scale synthetic benchmark dataset specifically designed for prostate ultrasound computed tomography (USCT). <strong>OPENPROS</strong> comprises over 280,000 pairs of anatomically realistic speed-of-sound (SOS) maps and corresponding ultrasound waveforms, generated through advanced finite-difference time-domain (FDTD) simulations.
+        Ultrasound computed tomography (USCT) provides quantitative tissue characterization, but its clinical implementation faces significant challenges, particularly under anatomically constrained limited-angle acquisition conditions specific to prostate imaging.
       </p>
       <p>
-        Derived from real clinical MRI/CT scans and ex vivo ultrasound measurements annotated by medical experts, our dataset accurately captures diverse prostate anatomies and wave propagation complexities without noise artifacts, making it ideal for methodological development and benchmarking.
+        To address these unmet needs, we introduce <strong>OPENPROS</strong>, a large-scale benchmark dataset explicitly developed for limited-view prostate USCT. Our dataset includes over 280,000 paired samples of realistic 2D speed-of-sound (SOS) phantoms and corresponding ultrasound full-waveform data, generated from anatomically accurate 3D digital prostate models derived from real clinical MRI/CT scans and ex vivo ultrasound measurements, annotated by medical experts.
       </p>
       <p>
-        Baseline experiments highlight the dataset's utility by evaluating several state-of-the-art deep learning inversion methods—such as CNN-based architectures and Vision Transformers—demonstrating superior reconstruction accuracy and robustness compared to traditional full-waveform inversion under challenging limited-view scenarios.
+        Simulations are conducted under clinically realistic configurations using advanced finite-difference time-domain (FDTD) and Runge-Kutta acoustic wave solvers, both provided as open-source components.
       </p>
       <p>
-        Both the dataset and associated simulation tools are fully open-sourced, facilitating reproducibility and future innovations in medical ultrasound imaging.
+        Through comprehensive baseline experiments, we demonstrate that state-of-the-art deep learning methods surpass traditional physics-based approaches in both inference efficiency and reconstruction accuracy. Nevertheless, current deep learning models still fall short of delivering clinically acceptable high-resolution images with sufficient accuracy.
+      </p>
+      <p>
+        By publicly releasing <strong>OPENPROS</strong>, we aim to encourage the development of advanced machine learning algorithms capable of bridging this performance gap and producing clinically usable, high-resolution, and highly accurate prostate ultrasound images.
       </p>
     </div>
   );
@@ -76,7 +79,7 @@ function Benchmarks() {
         <tbody>
           <tr><td>InversionNet</td><td>0.0621</td><td>0.1233</td><td>0.9565</td><td>0.9021</td></tr>
           <tr><td>VelocityGAN</td><td>0.0605</td><td>0.1210</td><td>0.9624</td><td>0.9113</td></tr>
-          <tr><td>VisionTransformer</td><td>0.0597</td><td>0.1198</td><td>0.9607</td><td>0.9095</td></tr>
+          <tr><td>Vit-Inversion</td><td>0.0130</td><td>0.0583</td><td>0.9756</td><td>0.9698</td></tr>
         </tbody>
       </table>
     </div>
