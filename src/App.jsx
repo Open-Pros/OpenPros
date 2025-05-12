@@ -15,7 +15,6 @@ function Navbar() {
         <NavLink to="/" className="nav-card">Home</NavLink>
         <NavLink to="/datasets" className="nav-card">Datasets</NavLink>
         <NavLink to="/benchmarks" className="nav-card">Benchmarks</NavLink>
-        <NavLink to="/citation" className="nav-card">Citation</NavLink>
       </div>
     </div>
   );
@@ -44,6 +43,11 @@ function Home() {
       <p>
         By publicly releasing <strong>OPENPROS</strong>, we aim to encourage the development of advanced machine learning algorithms capable of bridging this performance gap and producing clinically usable, high-resolution, and highly accurate prostate ultrasound images.
       </p>
+      <img
+        src="/images/pipeline.png"
+        alt="OpenPros end-to-end pipeline."
+        style={{ width: '100%', maxWidth: '1000px', borderRadius: '10px', marginTop: '20px' }}
+      />
     </div>
   );
 }
@@ -59,7 +63,7 @@ function Datasets() {
       <ul>
         <li>Ultrasound Data Shape: (1140 × 40 × 1000 × 161)</li>
         <li>SOS Map Shape: (1140 × 1 × 401 × 161)</li>
-        <li>Available via: <a href="https://open-pros.github.io/">open-pros.github.io</a></li>
+        <li>Available via: <a href="https://huggingface.co/datasets/ashynf/OpenPros">OpenPros.Dataset</a></li>
       </ul>
     </div>
   );
@@ -70,7 +74,7 @@ function Benchmarks() {
     <div className="content-container">
       <h2>Benchmarks</h2>
       <p>
-        We benchmarked 5 methods: Beamforming, Physics-based FWI, InversionNet, VelocityGAN, and VisionTransformer.
+        We benchmarked 5 methods: Beamforming, Physics-based FWI, InversionNet, VelocityGAN, and Vit-Inversion.
       </p>
       <table>
         <thead>
@@ -86,26 +90,6 @@ function Benchmarks() {
   );
 }
 
-function Citation() {
-  return (
-    <div className="content-container">
-      <h2>Citation</h2>
-      <p>
-        If you use <strong>OPENPROS</strong> in your work, please cite:
-      </p>
-      <pre>
-      {`@misc{feng2023openpros,
-  title={OPENPROS: A Large-Scale Dataset for Limited View Prostate Ultrasound Computed Tomography},
-  author={Shihang Feng et al.},
-  year={2023},
-  eprint={2306.12386},
-  archivePrefix={arXiv},
-  primaryClass={physics.geo-ph}
-}`}
-      </pre>
-    </div>
-  );
-}
 
 export default function App() {
   return (
@@ -115,7 +99,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/datasets" element={<Datasets />} />
         <Route path="/benchmarks" element={<Benchmarks />} />
-        <Route path="/citation" element={<Citation />} />
       </Routes>
     </Router>
   );
