@@ -65,3 +65,9 @@ table {
     background-color: #f0f0f0;
   }
   
+  .page-container {
+    max-width: 1000px;
+    margin: 0 auto;      
+    padding: 0 20px;     
+  }
+  
