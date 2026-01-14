@@ -122,10 +122,10 @@ function Benchmarks() {
         <tbody>
           <tr>
             <td style={tdStyle}>InversionNet</td>
-            <td style={tdStyle}>0.0621</td>
-            <td style={tdStyle}>0.1233</td>
-            <td style={tdStyle}>0.9565</td>
-            <td style={tdStyle}>0.9021</td>
+            <td style={tdStyle}>0.0073</td>
+            <td style={tdStyle}>0.0297</td>
+            <td style={tdStyle}>0.9876</td>
+            <td style={tdStyle}>0.9850</td>
           </tr>
           <tr>
             <td style={tdStyle}>VelocityGAN</td>
@@ -136,10 +136,10 @@ function Benchmarks() {
           </tr>
           <tr>
             <td style={tdStyle}><strong>ViT-Inversion</strong></td>
-            <td style={tdStyle}><strong>0.0130</strong></td>
-            <td style={tdStyle}><strong>0.0583</strong></td>
-            <td style={tdStyle}><strong>0.9756</strong></td>
-            <td style={tdStyle}><strong>0.9698</strong></td>
+            <td style={tdStyle}><strong>0.0067</strong></td>
+            <td style={tdStyle}><strong>0.0268</strong></td>
+            <td style={tdStyle}><strong>0.9908</strong></td>
+            <td style={tdStyle}><strong>0.9892</strong></td>
           </tr>
         </tbody>
       </table>
