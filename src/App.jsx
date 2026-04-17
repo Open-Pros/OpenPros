@@ -29,23 +29,25 @@ function Home() {
 
       <p>
         Prostate cancer is one of the most common and lethal cancers among men, making its early detection critically
-        important. Although ultrasound imaging offers greater accessibility and cost-effectiveness compared to MRI,
-        traditional transrectal ultrasound (TRUS) methods suffer from low sensitivity, especially in detecting anteriorly
-        located tumors. Ultrasound computed tomography (USCT) provides quantitative tissue characterization, but its
-        clinical implementation faces significant challenges, particularly under anatomically constrained limited-angle
-        acquisition conditions specific to prostate imaging. To address these unmet needs, we introduce{" "}
-        <strong>OPENPROS</strong>, a large-scale benchmark dataset explicitly developed for limited-view prostate USCT.
+        important. Ultrasound computed tomography (USCT) has emerged as an accessible and cost-effective method that
+        reconstructs quantitative tissue parameters, which can serve as potential biomarkers for malignancy. However,
+        current prostate USCT faces considerable barriers: limited-angle acquisitions due to anatomical constraints, tissue
+        heterogeneity, proximity to organs and bony pelvic structures, and lengthy processing times. The lack of large-scale,
+        anatomically precise datasets significantly hampers the development of high-quality, efficient, and generalizable
+        methods. To address this gap, we introduce <strong>OPENPROS</strong>, the first large-scale benchmark dataset for
+        limited-angle prostate USCT, designed to evaluate machine learning algorithms for inverse problems systematically.
         Our dataset includes over 280,000 paired samples of realistic 2D speed-of-sound (SOS) phantoms and corresponding
-        ultrasound full-waveform data, generated from anatomically accurate 3D digital prostate models derived from real
-        clinical MRI/CT scans and ex vivo ultrasound measurements, annotated by medical experts. Simulations are conducted
-        under clinically realistic configurations using advanced finite-difference time-domain (FDTD) and Runge-Kutta
-        acoustic wave solvers, both provided as open-source components. Through comprehensive baseline experiments, we
-        demonstrate that state-of-the-art deep learning methods surpass traditional physics-based approaches in both
-        inference efficiency and reconstruction accuracy. Nevertheless, current deep learning models still fall short of
-        delivering clinically acceptable high-resolution images with sufficient accuracy. By publicly releasing{" "}
-        <strong>OPENPROS</strong>, we aim to encourage the development of advanced machine learning algorithms capable of
-        bridging this performance gap and producing clinically usable, high-resolution, and highly accurate prostate
-        ultrasound images.
+        ultrasound full-waveform data, generated from anatomically accurate 3D digital prostate models derived from 4 real
+        clinical MRI/CT scans and 62 ex vivo prostate specimens with experimental ultrasound measurements, annotated by medical
+        experts. Simulations are conducted under clinically realistic configurations using advanced finite-difference
+        time-domain (FDTD) and Runge-Kutta acoustic wave solvers, both provided as open-source components. Through comprehensive
+        benchmarking, we find that deep learning methods significantly outperform traditional physics-based algorithms in
+        inference efficiency and reconstruction accuracy. However, our results also reveal that current machine learning
+        methods fail to deliver clinically acceptable, high-resolution reconstructions, underscoring critical gaps in
+        generalization, robustness, and uncertainty quantification. By publicly releasing <strong>OPENPROS</strong>, we provide
+        the community with a rigorous benchmark that not only enables fair method comparison but also motivates new advances in
+        physics-informed learning, foundation models for scientific imaging, and uncertainty-aware reconstruction, bridging the
+        gap between academic ML research and real-world clinical deployment.
       </p>
 
       <div style={{ textAlign: "center", marginTop: "30px" }}>
